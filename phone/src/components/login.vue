@@ -6,9 +6,9 @@ Vue.component(field.name, field)
         <img src="login.vue">
         <mt-field class="mt20" label="用户名" placeholder="请输入用户名" type="text" v-model="username"></mt-field>
         <mt-field label="密码" placeholder="请输入密码" type="password" v-model="password"></mt-field>
-        <p class="forget">忘记密码?</p>
+        <p class="forget">设置密码</p>
         <mt-button class="mt20" type="primary" size="large">登录</mt-button>
-        <p class="copy">版权所有：呦吼科技</p>
+        <p class="copy">版权所有：呦猴科技</p>
     </div>
 
 </template>

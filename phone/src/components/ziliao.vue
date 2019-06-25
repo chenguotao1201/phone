@@ -35,13 +35,13 @@ Vue.component(Header.name, Header);
 				document.getElementById("upload_file").click();
 			},
 			close(index) {
-				this.list.splice(index, 1);
-				this.maxStatus = this.list == this.max ? false : true;
+				this.items.splice(index, 1);
+				this.maxStatus = this.items == this.max ? false : true;
 			},
 			async inputChange(e) {
 				debugger;
 				let files = e.target.files;
-				let len = this.list.length + files.length;
+				let len = this.items.length + files.length;
 				if (len > this.max) {
 					document.getElementById("upload_file").value = "";
 					this.$ui.toast(`最多允许上传${this.max}张`);
@@ -70,8 +70,8 @@ Vue.component(Header.name, Header);
 						resolve(result);
 						return;
 					}
-					this.list.push(result.data.url);
-					if (this.list.length == this.max) {
+					this.items.push(result.data.url);
+					if (this.items.length == this.max) {
 						this.maxStatus = false;
 					}
 					resolve(result);
